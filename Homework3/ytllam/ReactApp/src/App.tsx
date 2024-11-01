@@ -1,5 +1,5 @@
 import Example from './components/sampleComponents/Example.tsx'
-import Viz1 from './components/Viz1.tsx'
+import Sankey from './components/Sankey.tsx'
 import Viz2 from './components/Viz2.tsx'
 import Viz3 from './components/Viz3.tsx'
 import Grid from '@mui/material/Grid';
@@ -85,8 +85,8 @@ function Layout() {
       <Grid container spacing={1} direction='column' id='main-container'>
         {/* Horizontal grids as cells */}
         <Grid container item xs={6} sm={6} md={8} lg={8} display='flex' justifyContent='center'>
-          <Grid item xs sm={9} md={8} lg={7} xl={4}>
-            <Viz1/>
+          <Grid item xs={12} sm={10} md={10}>
+            <Sankey/>
           </Grid>
         </Grid>
         <Grid container item xs={6} sm={6} md={4} lg={4}
@@ -94,7 +94,7 @@ function Layout() {
           <Grid item xs={12} sm={10} md={6} lg={4} xl={4}>
             <Viz2/>
           </Grid>
-          <Grid md={0} xl={1}/>
+          <Grid item md={0} xl={1}/>
           <Grid item xs={12} sm={10} md={6} lg={5} xl={5}>
             <Viz3/>
           </Grid>
