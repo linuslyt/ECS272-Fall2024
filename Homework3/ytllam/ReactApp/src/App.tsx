@@ -92,11 +92,11 @@ function Layout() {
         <Grid container item xs={6} sm={6} md={4} lg={4}
           display='flex' justifyContent='center'>
           <Grid item xs={12} sm={10} md={6} lg={4} xl={4}>
-            <Viz2/>
+            {/* <Viz2/> */}
           </Grid>
           <Grid item md={0} xl={1}/>
           <Grid item xs={12} sm={10} md={6} lg={5} xl={5}>
-            <Viz3/>
+            {/* <Viz3/> */}
           </Grid>
         </Grid>
       </Grid>
