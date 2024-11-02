@@ -3,24 +3,24 @@
  * Types for Components and HTML elements
  */
 export interface Margin {
-    readonly left: number;
-    readonly right: number;
-    readonly top: number;
-    readonly bottom: number;
+  readonly left: number;
+  readonly right: number;
+  readonly top: number;
+  readonly bottom: number;
 }
 
 export interface ComponentSize {
-    width: number;
-    height: number;
+  width: number;
+  height: number;
 }
 
 export interface Point {
-    readonly posX: number;
-    readonly posY: number;
+  readonly posX: number;
+  readonly posY: number;
 }
 
 export interface Bar{
-    readonly value: number;
+  readonly value: number;
 }
 
 /**
@@ -28,131 +28,181 @@ export interface Bar{
  */
 
 export enum SchoolEnum {
-    GabrielPereira = "GP",
-    MousinhoDaSilveira = "MS"
+  'Gabriel Pereira' = 'GP',
+  'Mousinho Da Silveira' = 'MS',
 }
 
 export enum SexEnum {
-    Male = "M",
-    Female = "F"
+  Male = 'M',
+  Female = 'F',
 }
 
 export enum AddressEnum {
-    Urban = "U",
-    Rural = "R"
+  Urban = 'U',
+  Rural = 'R',
 }
 
 export enum FamSizeEnum {
-    ThreeOrLess = "LE3",
-    MoreThanThree = "GT3"
+  '<=3' = 'LE3',
+  '>3' = 'GT3',
 }
 
 export enum ParentStatusEnum {
-    Together = "T",
-    Apart = "A"
+  Together = 'T',
+  Apart = 'A',
 }
 
 export enum EducationEnum {
-    None = "0",
-    FourthGrade = "1",
-    NinthGrade = "2",
-    SecondaryEd = "3",
-    HigherEd = "4"
+  'None' = '0',
+  'Fourth Grade' = '1',
+  'Ninth Grade' = '2',
+  'Secondary Ed' = '3',
+  'Higher Ed' = '4',
 }
 
 export enum JobEnum {
-    Teacher = "teacher",
-    HealthCare = "health",
-    CivilServices = "services",
-    StayAtHome = "at_home",
-    Other = "other"
+  'Teacher' = 'teacher',
+  'Health Care' = 'health',
+  'Civil Services' = 'services',
+  'Stay At Home' = 'at_home',
+  'Other' = 'other',
 }
 
 export enum SchoolReasonEnum { 
-    CloseToHome = "home",
-    Reputation = "reputation",
-    CoursePreference = "course",
-    Other = "other"
+  'Close To Home' = 'home',
+  'Reputation' = 'reputation',
+  'CoursePreference' = 'course',
+  'Other' = 'other',
 }
 
 export enum GuardianEnum {
-    Mother = "mother",
-    Father = "father",
-    Other = "other"
+  Mother = 'mother',
+  Father = 'father',
+  Other = 'other',
 }
 
 export enum TravelTimeEnum {
-    LessThanFifteenMins = "1",
-    FifteenToThirtyMins = "2",
-    ThirtyMinsToOneHour = "3",
-    MoreThanOneHour = "4"
+  '< 15 min' = '1',
+  '15-30 min' = '2',
+  '30 min - 1 h' = '3',
+  '> 1 h' = '4',
 }
 
 export enum WeeklyStudyTimeEnum {
-    LessThanTwoHours = "1",
-    TwoToFiveHours = "2",
-    FiveToTenHours = "3",
-    MoreThanTenHours = "4"
+  '< 2 h' = '1',
+  '2-5 h' = '2',
+  '5-10 h' = '3',
+  '> 10 h' = '4',
 }
 
 export enum NumClassesFailedEnum {
-    One = "1",
-    Two = "2",
-    ThreeOrMore = "3"
+  'never' = '0',
+  'once' = '1',
+  'twice' = '2',
+  'thrice+' = '3',
 }
 
 export enum QualityEnum {
-    VeryBad = "1",
-    Bad = "2",
-    Average = "3",
-    Good = "4",
-    VeryGood = "5"
+  'Very Bad' = '1',
+  'Bad' = '2',
+  'Average' = '3',
+  'Good' = '4',
+  'Very Good' = '5',
 }
 
 export enum FrequencyEnum {
-    VeryLow = "1",
-    Low = "2",
-    Average = "3",
-    High = "4",
-    VeryHigh = "5"
+  'Very Low' = '1',
+  'Low' = '2',
+  'Average' = '3',
+  'High' = '4',
+  'Very High' = '5'
+}
+
+export enum BooleanEnum {
+  'Yes' = 'yes',
+  'No' = 'no',
 }
 
 export interface DataRow {
-    // readonly columns: string;
-    [index: string] : string | boolean | number | null | undefined;
-    readonly school: SchoolEnum;
-    readonly sex: SexEnum;
-    readonly age: number;
-    readonly address: AddressEnum;
-    readonly famSize: FamSizeEnum;
-    readonly parentStatus: ParentStatusEnum;
-    readonly motherEdu: EducationEnum;
-    readonly fatherEdu: EducationEnum;
-    readonly motherJob: JobEnum;
-    readonly fatherJob: JobEnum;
-    readonly reason: SchoolReasonEnum;
-    readonly guardian: GuardianEnum;
-    readonly travelTime: TravelTimeEnum;
-    readonly studyTime: WeeklyStudyTimeEnum;
-    readonly failures: NumClassesFailedEnum;
-    readonly schoolSup: boolean;
-    readonly famSup: boolean;
-    readonly paid: boolean;
-    readonly activities: boolean;
-    readonly nursery: boolean;
-    readonly higher: boolean;
-    readonly internet: boolean;
-    readonly romantic: boolean;
-    readonly famRel: QualityEnum;
-    readonly freeTime: FrequencyEnum;
-    readonly goOut: FrequencyEnum;
-    readonly weekdayAlc: FrequencyEnum;
-    readonly weekendAlc: FrequencyEnum;
-    readonly health: QualityEnum;
-    readonly absences: number;
-    readonly G1: number;
-    readonly G2: number;
-    readonly G3: number;
+  // readonly columns: string;
+  [index: string] : string | boolean | number | null | undefined;
+  readonly school: SchoolEnum;
+  readonly sex: SexEnum;
+  readonly age: number;
+  readonly address: AddressEnum;
+  readonly famSize: FamSizeEnum;
+  readonly parentStatus: ParentStatusEnum;
+  readonly motherEdu: EducationEnum;
+  readonly fatherEdu: EducationEnum;
+  readonly motherJob: JobEnum;
+  readonly fatherJob: JobEnum;
+  readonly reason: SchoolReasonEnum;
+  readonly guardian: GuardianEnum;
+  readonly travelTime: TravelTimeEnum;
+  readonly studyTime: WeeklyStudyTimeEnum;
+  readonly failures: NumClassesFailedEnum;
+  readonly schoolSup: boolean;
+  readonly famSup: boolean;
+  readonly paid: boolean;
+  readonly activities: boolean;
+  readonly nursery: boolean;
+  readonly higher: boolean;
+  readonly internet: boolean;
+  readonly romantic: boolean;
+  readonly famRel: QualityEnum;
+  readonly freeTime: FrequencyEnum;
+  readonly goOut: FrequencyEnum;
+  readonly weekdayAlc: FrequencyEnum;
+  readonly weekendAlc: FrequencyEnum;
+  readonly health: QualityEnum;
+  readonly absences: number;
+  readonly G1: number;
+  readonly G2: number;
+  readonly G3: number;
 }
 
+export const COL_TO_ENUM_MAP = new Map(Object.entries({
+  'school': SchoolEnum,
+  'sex': SexEnum,
+  'address': AddressEnum,
+  'famSize': FamSizeEnum,
+  'parentStatus': ParentStatusEnum,
+  'motherEdu': EducationEnum,
+  'fatherEdu': EducationEnum,
+  'motherJob': JobEnum,
+  'fatherJob': JobEnum,
+  'reason': SchoolReasonEnum,
+  'guardian': GuardianEnum,
+  'travelTime': TravelTimeEnum,
+  'studyTime': WeeklyStudyTimeEnum,
+  'failures': NumClassesFailedEnum,
+  'schoolSup': BooleanEnum,
+  'famSup': BooleanEnum,
+  'paid': BooleanEnum,
+  'activities': BooleanEnum,
+  'nursery': BooleanEnum,
+  'higher': BooleanEnum,
+  'internet': BooleanEnum,
+  'romantic': BooleanEnum,
+  'famRel': QualityEnum,
+  'freeTime': FrequencyEnum,
+  'goOut': FrequencyEnum,
+  'weekdayAlc': FrequencyEnum,
+  'weekendAlc': FrequencyEnum,
+  'health': QualityEnum,
+}));
+
+// issue: node ids need to be unique.
+export const ALL_NODES = Array.from(COL_TO_ENUM_MAP)
+  // for every column
+  .flatMap(([col, colType]) => Object.entries(colType) // Object.entries() returns array of [name, value] pairs.
+    // map over column's enum type to create nodes for all possible values
+    .flatMap(([enumEntryName, enumEntryValue]) => ({
+        'column': col,
+        'id': col + enumEntryValue, // id needs to be unique among nodes, so we need to prepend column name.
+        'val': enumEntryValue, // value in csv. we use 'val' since the 'value' key is used by d3-sankey.
+        'label': enumEntryName // label for displaying on chart.
+      })
+    )
+  );
 export const NUMBER_COLUMNS = 33;

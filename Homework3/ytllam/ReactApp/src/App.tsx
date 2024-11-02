@@ -1,5 +1,6 @@
 import Example from './components/sampleComponents/Example.tsx'
 import Sankey from './components/Sankey.tsx'
+import Viz1 from './components/Viz1.tsx'
 import Viz2 from './components/Viz2.tsx'
 import Viz3 from './components/Viz3.tsx'
 import Grid from '@mui/material/Grid';
@@ -49,14 +50,14 @@ function Layout() {
             travelTime: r.traveltime as types.TravelTimeEnum,
             studyTime: r.studytime as types.WeeklyStudyTimeEnum,
             failures: r.failures as types.NumClassesFailedEnum,
-            schoolSup: r.schoolsup === 'yes',
-            famSup: r.famsup === 'yes',
-            paid: r.paid === 'yes',
-            activities: r.activities === 'yes',
-            nursery: r.nursery === 'yes',
-            higher: r.higher === 'yes',
-            internet: r.internet === 'yes',
-            romantic: r.romantic === 'yes',
+            schoolSup: r.schoolsup as types.BooleanEnum,
+            famSup: r.famsup as types.BooleanEnum,
+            paid: r.paid as types.BooleanEnum,
+            activities: r.activities as types.BooleanEnum,
+            nursery: r.nursery as types.BooleanEnum,
+            higher: r.higher as types.BooleanEnum,
+            internet: r.internet as types.BooleanEnum,
+            romantic: r.romantic as types.BooleanEnum,
             famRel: r.famrel as types.QualityEnum,
             freeTime: r.freetime as types.FrequencyEnum,
             goOut: r.goout as types.FrequencyEnum,
